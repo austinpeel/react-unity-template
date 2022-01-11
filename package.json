@@ -1,5 +1,6 @@
 {
   "name": "react-unity-template",
+  "homepage": "https://austinpeel.github.io/react-unity-template/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
