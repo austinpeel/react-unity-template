@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import Unity, { UnityContent } from 'react-unity-webgl';
 import './App.css';
 
 function App() {
+  const unityContent = new UnityContent(
+    'DefaultApp/Build/DefaultApp.json',
+    'DefaultApp/Build/UnityLoader.js'
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <h1 style={{ 'font-size': '30px' }}>
+          Template for Unity apps embedded in React webpages
+        </h1>
       </header>
+      <div className='Unity-player'>
+        <p style={{ 'text-align': 'left' }}>
+          Use the arrow keys to move the cube.
+        </p>
+        <Unity unityContent={unityContent} />
+      </div>
     </div>
   );
 }
